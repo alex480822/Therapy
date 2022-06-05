@@ -22,6 +22,38 @@ body {
   max-width: 1200px;
 }
 
+.section-padding {
+  padding: 3em 2em;
+}
+
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background-color: #fff;
+}
+
+.white-block-left {
+  bottom: -40px;
+  left: -50px;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+}
+
+.white-block-right {
+  top: -39px;
+  left: -50px;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
+.white-block-BottomLeft {
+  bottom: 0px;
+  left: -50px;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,8 +163,8 @@ nav .logo {
 
 .header__box-heading {
   margin-bottom: 0.5em;
-  font-size: 1.6rem;
   font-weight: 500;
+  font-size: 1.4rem;
 }
 
 .header__box-name {
@@ -164,6 +196,151 @@ nav .logo {
 
 .header__btn::before {
   background-color: #eee;
+}
+
+.aboutme {
+  position: relative;
+}
+
+.aboutme__box {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aboutme__box-img img {
+  border-radius: 50%;
+  width: 250px;
+}
+
+.aboutme__box-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.aboutme__box-text-title p {
+  margin-top: 0.3em;
+  color: #2F8F9D;
+  font-size: 1.2rem;
+}
+
+.aboutme__box-text-description {
+  padding: 1em 0;
+  font-size: 1.1rem;
+}
+
+.consultation {
+  position: relative;
+  background-color: #B3E8E5;
+  z-index: -1;
+}
+
+.consultation__container {
+  padding: 2em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.consultation__container-title {
+  font-size: 1.4rem;
+}
+
+.consultation__container-localization {
+  font-size: 1.1rem;
+  color: #2F8F9D;
+}
+
+.white-bar {
+  height: 50px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: linear-gradient(45deg, rgba(181, 181, 200, 0.75), rgba(199, 200, 181, 0.75)), url("../img/woman-doing-speech-therapy-with-little-blonde-boy.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.card__group {
+  padding: 1em;
+  margin: 1em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.card__group i {
+  font-size: 3rem;
+  padding: 0.5em;
+}
+
+.card__group-body {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card__group-body-title {
+  margin: 0.5em 0;
+}
+
+.card__group-body-text {
+  margin: 0.5em 0;
 }
 
 @media (max-width: 800px) {
@@ -228,6 +405,20 @@ nav .logo {
     margin-left: 10%;
     font-size: 3rem;
   }
+  .aboutme__box {
+    padding: 0.5em 1em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aboutme__box-img img {
+    width: 300px;
+  }
+  .aboutme__box-text-description {
+    padding: 2em;
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -245,6 +436,21 @@ nav .logo {
     margin-bottom: 15%;
     padding: 1em 2em;
     font-size: 1.2rem;
+  }
+  .aboutme__box {
+    margin: 0 2em;
+  }
+  .aboutme__box-img img {
+    width: 330px;
+  }
+  .consultation__container {
+    padding: 2.5em 1em;
+  }
+  .consultation__container-title {
+    font-size: 1.7rem;
+  }
+  .consultation__container-localization {
+    font-size: 1.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
