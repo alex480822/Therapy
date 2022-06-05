@@ -1,0 +1,210 @@
+@import "./colors";
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	// font-family: "Dancing Script", cursive;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.6rem;
+}
+.wapper {
+	margin: 0 auto;
+	width: 100% !important;
+	max-width: 1200px;
+}
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $main-color;
+	color: $pure-white;
+	&__logo {
+		font-size: 2.2rem;
+		margin-left: 1em;
+	}
+}
+nav .mainMenu {
+	display: flex;
+	list-style: none;
+}
+nav .mainMenu li a {
+	display: inline-block;
+	padding: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $pure-white;
+	font-size: 18px;
+	transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+	background: rgb(255, 94, 0);
+}
+nav .openMenu {
+	font-size: 2rem;
+	margin: 20px;
+	display: none;
+	cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+	font-size: 2rem;
+	display: none;
+	cursor: pointer;
+}
+.fa-facebook:hover {
+	color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+	color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+	color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+	color: rgb(255, 123, 0);
+}
+nav .logo {
+	margin: 6px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 2em;
+	height: 100vh;
+	background: $light-gradient,
+		url("/img/psychologist-helping-little-girl-speech-therapy-indoors.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+
+	&__box {
+		padding: 0.5em;
+		margin-bottom: 20%;
+		background-color: $pure-white;
+		border-radius: 10px;
+		text-align: center;
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+		&-name {
+			font-size: 0.7em;
+		}
+		&-text {
+			margin-top: 1em;
+			font-size: 1rem;
+			font-weight: 300;
+		}
+		hr {
+			width: 90%;
+			margin: auto auto;
+		}
+	}
+	&__btn {
+		padding: 0.6em;
+		margin-bottom: 15%;
+		font-size: 1.1rem;
+		color: $pure-white;
+		background-color: $main-color;
+		border-radius: 10px;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: $light-white;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	nav .mainMenu {
+		height: 100vh;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		z-index: 10;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: $main-color;
+		transition: top 1s ease 0s;
+		display: none;
+	}
+	nav .mainMenu .closeMenu {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	nav .openMenu {
+		display: block;
+	}
+	nav .mainMenu li a:hover {
+		background: none;
+		color: $secondary-color;
+	}
+	.icons i {
+		display: inline-block;
+		padding: 12px;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__box {
+			padding: 1.5em;
+			margin-bottom: 15%;
+			&-heading {
+				font-size: 1.8rem;
+			}
+		}
+		&__btn {
+			margin-bottom: 15%;
+			padding: 1em;
+			font-size: 1rem;
+		}
+	}
+	.navbar {
+		height: 75px;
+		&__logo {
+			margin-left: 10%;
+			font-size: 3rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.header {
+		&__box {
+			padding: 1.5em;
+			margin-bottom: 15%;
+			&-heading {
+				font-size: 2rem;
+			}
+			&-text {
+				font-size: 1.2rem;
+			}
+		}
+		&__btn {
+			margin-bottom: 15%;
+			padding: 1em 2em;
+			font-size: 1.2rem;
+		}
+	}
+}
