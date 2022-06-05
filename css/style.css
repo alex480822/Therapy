@@ -246,6 +246,10 @@ nav .logo {
   text-align: center;
 }
 
+.aboutme__box-text-title h4 {
+  border-bottom: 2px solid #2F8F9D;
+}
+
 .aboutme__box-text-title p {
   margin-top: 0.3em;
   color: #2F8F9D;
@@ -281,7 +285,23 @@ nav .logo {
 }
 
 .consultation__container-title {
+  padding: 0.7em;
   font-size: 1.4rem;
+  background-color: #2F8F9D;
+  color: #fff;
+  position: relative;
+}
+
+.consultation__container-title::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 50px solid #2F8F9D;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
 }
 
 .consultation__container-localization {
@@ -297,9 +317,8 @@ nav .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 1.5em 0;
   background-image: linear-gradient(45deg, rgba(181, 181, 200, 0.75), rgba(199, 200, 181, 0.75)), url("../img/woman-doing-speech-therapy-with-little-blonde-boy.jpg");
   background-attachment: fixed;
