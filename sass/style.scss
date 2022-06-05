@@ -115,20 +115,24 @@ nav .logo {
 		url("/img/psychologist-helping-little-girl-speech-therapy-indoors.jpg");
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: bottom;
 
 	&__box {
+		width: 50vh;
 		padding: 0.5em;
 		margin-bottom: 20%;
-		background-color: $pure-white;
+		background-color: rgba(59, 172, 182, 0.5);
 		border-radius: 10px;
 		text-align: center;
 		&-heading {
 			margin-bottom: 0.5em;
-			font-weight: 500;
+			font-weight: 600;
 			font-size: 1.4rem;
+			color: $dark;
 		}
 		&-name {
 			font-size: 0.7em;
+			color: $pure-white;
 		}
 		&-text {
 			margin-top: 1em;
@@ -159,7 +163,7 @@ nav .logo {
 .aboutme {
 	position: relative;
 	&__box {
-		padding:1em ;
+		padding: 1em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -202,31 +206,30 @@ nav .logo {
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
-        text-align: center;
+		text-align: center;
 		&-title {
-            font-size: 1.4rem;
+			font-size: 1.4rem;
 			// text-transform: uppercase;
 		}
 		&-localization {
-            font-size: 1.1rem;
-            color: $main-color;
+			font-size: 1.1rem;
+			color: $main-color;
 		}
 	}
-}
-.white-bar {
-	height: 50px;
 }
 .card {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin: 1.5em 0;
 	background-image: $light-gradient,
 		url("../img/woman-doing-speech-therapy-with-little-blonde-boy.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	&__group {
+		transition: transform 0.3s;
 		padding: 1em;
-		margin: 1em 1em;
+		margin: 3em 1em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -236,6 +239,7 @@ nav .logo {
 		i {
 			font-size: 3rem;
 			padding: 0.5em;
+			color: $main-color;
 		}
 		&-body {
 			font-size: 1rem;
@@ -247,6 +251,9 @@ nav .logo {
 				margin: 0.5em 0;
 			}
 		}
+	}
+	&__group:hover {
+		transform: scale(1.1);
 	}
 }
 
@@ -309,27 +316,57 @@ nav .logo {
 	.aboutme {
 		&__box {
 			padding: 0.5em 1em;
-            flex-direction: row;
-            
+			flex-direction: row;
+
 			&-img {
 				img {
 					width: 300px;
 				}
 			}
-            &-text{
-                &-description{
-                    padding: 2em;
-                    font-size: 1.3rem;
-                }
-            }
+			&-text {
+				&-description {
+					padding: 2em;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+	.card {
+		margin: 2em auto;
+		padding: 2em 1em;
+		flex-direction: row;
+		&__group {
+			padding: 1em;
+			margin: 0 0.5em;
+			flex-direction: column;
+			justify-content: center;
+			border-radius: 8px;
+			background-color: $pure-white;
+			i {
+				font-size: 3.5rem;
+				padding: 0.5em;
+			}
+			&-body {
+				font-size: 1rem;
+				text-align: center;
+				&-title {
+					margin: 1em 0;
+					font-size: 1.3rem;
+				}
+				&-text {
+					padding: 1em;
+					margin: 0.5em 0;
+				}
+			}
 		}
 	}
 }
 @media (min-width: 992px) {
 	.header {
 		&__box {
+			width: 75%;
 			padding: 1.5em;
-			margin-bottom: 15%;
+			margin-bottom: 10%;
 			&-heading {
 				font-size: 2rem;
 			}
@@ -338,14 +375,14 @@ nav .logo {
 			}
 		}
 		&__btn {
-			margin-bottom: 15%;
+			margin-bottom: 10%;
 			padding: 1em 2em;
 			font-size: 1.2rem;
 		}
 	}
-    .aboutme {
+	.aboutme {
 		&__box {
-            margin: 0 2em;
+			margin: 0 2em;
 			&-img {
 				img {
 					width: 330px;
@@ -353,16 +390,37 @@ nav .logo {
 			}
 		}
 	}
-    .consultation {
-        &__container {
-            padding: 2.5em 1em;
-            &-title {
-                font-size: 1.7rem;
-                // text-transform: uppercase;
-            }
-            &-localization {
-                font-size: 1.3rem;
-            }
-        }
-    }
+	.consultation {
+		&__container {
+			padding: 2.5em 1em;
+			&-title {
+				font-size: 1.7rem;
+				// text-transform: uppercase;
+			}
+			&-localization {
+				font-size: 1.3rem;
+			}
+		}
+	}
+	.card {
+		padding: 5em 1em;
+		&__group {
+			max-width: 500px;
+			margin: 0 1em;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		&__box {
+			min-height: 250px;
+		}
+	}
+	.aboutme {
+		&__box {
+			max-width: 1200px;
+			margin: 0 6em;
+		}
+	}
 }

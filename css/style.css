@@ -151,24 +151,28 @@ nav .logo {
   background: linear-gradient(45deg, rgba(181, 181, 200, 0.75), rgba(199, 200, 181, 0.75)), url("/img/psychologist-helping-little-girl-speech-therapy-indoors.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: bottom;
 }
 
 .header__box {
+  width: 50vh;
   padding: 0.5em;
   margin-bottom: 20%;
-  background-color: #fff;
+  background-color: rgba(59, 172, 182, 0.5);
   border-radius: 10px;
   text-align: center;
 }
 
 .header__box-heading {
   margin-bottom: 0.5em;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
+  color: #2e2e2e;
 }
 
 .header__box-name {
   font-size: 0.7em;
+  color: #fff;
 }
 
 .header__box-text {
@@ -285,10 +289,6 @@ nav .logo {
   color: #2F8F9D;
 }
 
-.white-bar {
-  height: 50px;
-}
-
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,14 +300,19 @@ nav .logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 1.5em 0;
   background-image: linear-gradient(45deg, rgba(181, 181, 200, 0.75), rgba(199, 200, 181, 0.75)), url("../img/woman-doing-speech-therapy-with-little-blonde-boy.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
 
 .card__group {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   padding: 1em;
-  margin: 1em 1em;
+  margin: 3em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,6 +333,7 @@ nav .logo {
 .card__group i {
   font-size: 3rem;
   padding: 0.5em;
+  color: #2F8F9D;
 }
 
 .card__group-body {
@@ -341,6 +347,11 @@ nav .logo {
 
 .card__group-body-text {
   margin: 0.5em 0;
+}
+
+.card__group:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
@@ -417,14 +428,52 @@ nav .logo {
   }
   .aboutme__box-text-description {
     padding: 2em;
+    font-size: 1.2rem;
+  }
+  .card {
+    margin: 2em auto;
+    padding: 2em 1em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .card__group {
+    padding: 1em;
+    margin: 0 0.5em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  .card__group i {
+    font-size: 3.5rem;
+    padding: 0.5em;
+  }
+  .card__group-body {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .card__group-body-title {
+    margin: 1em 0;
     font-size: 1.3rem;
+  }
+  .card__group-body-text {
+    padding: 1em;
+    margin: 0.5em 0;
   }
 }
 
 @media (min-width: 992px) {
   .header__box {
+    width: 75%;
     padding: 1.5em;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
   .header__box-heading {
     font-size: 2rem;
@@ -433,7 +482,7 @@ nav .logo {
     font-size: 1.2rem;
   }
   .header__btn {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     padding: 1em 2em;
     font-size: 1.2rem;
   }
@@ -451,6 +500,23 @@ nav .logo {
   }
   .consultation__container-localization {
     font-size: 1.3rem;
+  }
+  .card {
+    padding: 5em 1em;
+  }
+  .card__group {
+    max-width: 500px;
+    margin: 0 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__box {
+    min-height: 250px;
+  }
+  .aboutme__box {
+    max-width: 1200px;
+    margin: 0 6em;
   }
 }
 /*# sourceMappingURL=style.css.map */
