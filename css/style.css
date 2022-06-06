@@ -265,10 +265,11 @@ nav .logo {
   position: relative;
   background-color: #B3E8E5;
   z-index: -1;
+  overflow: hidden;
 }
 
 .consultation__container {
-  padding: 2em 1em;
+  padding: 1.8em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,28 +286,17 @@ nav .logo {
 }
 
 .consultation__container-title {
-  padding: 0.7em;
-  font-size: 1.4rem;
-  background-color: #2F8F9D;
-  color: #fff;
+  padding: 0.2em;
+  font-size: 1.3rem;
+  color: #2F8F9D;
   position: relative;
 }
 
-.consultation__container-title::before {
-  content: "";
-  position: absolute;
-  left: -50px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-right: 50px solid #2F8F9D;
-  border-top: 35px solid transparent;
-  border-bottom: 35px solid transparent;
-}
-
 .consultation__container-localization {
-  font-size: 1.1rem;
+  padding: 0.5em;
+  font-size: 1rem;
   color: #2F8F9D;
+  position: relative;
 }
 
 .card {
@@ -371,6 +361,62 @@ nav .logo {
 .card__group:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.therapy {
+  padding: 2em 1em;
+  margin: 2em auto;
+}
+
+.therapy__title {
+  width: 100%;
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.therapy__box {
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.therapy__box img {
+  width: 100%;
+}
+
+.therapy__box-text {
+  border: 1px solid #2F8F9D;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.therapy__box-text-title {
+  padding: 0.8em;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  background-color: #2F8F9D;
+}
+
+.therapy__box-text-description {
+  padding: 1em;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 800px) {
@@ -448,6 +494,45 @@ nav .logo {
   .aboutme__box-text-description {
     padding: 2em;
     font-size: 1.2rem;
+  }
+  .consultation__container {
+    padding: 2em 1em;
+  }
+  .consultation__container-title {
+    padding: 0.45em;
+    font-size: 1.4rem;
+    background-color: #2F8F9D;
+    color: #fff;
+    position: relative;
+  }
+  .consultation__container-title::before {
+    content: "";
+    position: absolute;
+    left: -2.1em;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 2.1em solid #2F8F9D;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+  }
+  .consultation__container-localization {
+    padding: 0.45em;
+    font-size: 1.1rem;
+    background-color: #2F8F9D;
+    color: #fff;
+    position: relative;
+  }
+  .consultation__container-localization::before {
+    content: "";
+    position: absolute;
+    left: -2.05em;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 2.1em solid #2F8F9D;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
   }
   .card {
     margin: 2em auto;
