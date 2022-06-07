@@ -121,14 +121,14 @@ nav .logo {
 		width: 50vh;
 		padding: 0.5em;
 		margin-bottom: 20%;
-		background-color: rgba(59, 172, 182, 0.5);
+		background-color: $main-color;
 		border-radius: 10px;
 		text-align: center;
 		&-heading {
 			margin-bottom: 0.5em;
 			font-weight: 600;
 			font-size: 1.4rem;
-			color: $dark;
+			color: $pure-white;
 		}
 		&-name {
 			font-size: 0.7em;
@@ -247,7 +247,7 @@ nav .logo {
 		i {
 			font-size: 3rem;
 			padding: 0.5em;
-			color: $main-color;
+			color: $secondary-color;
 		}
 		&-body {
 			font-size: 1rem;
@@ -308,20 +308,18 @@ nav .logo {
 	padding: 2em 1em;
 	margin: 2em auto;
 	&__title {
+		padding: 1em;
+		background-color: $main-color;
+		color: $pure-white;
 		width: 100%;
 		margin-bottom: 1em;
 		text-align: center;
 		font-size: 1.4rem;
 	}
-	&__boxes{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
 	&__box {
 		margin: 1em 0.5em;
 		border-radius: 10px;
-		&-img{
+		&-img {
 			img {
 				width: 100%;
 			}
@@ -337,7 +335,7 @@ nav .logo {
 				font-size: 1.2rem;
 				font-weight: 600;
 				color: white;
-				background-color: $main-color;
+				background-color: $secondary-color;
 			}
 			&-description {
 				padding: 1em;
@@ -348,40 +346,9 @@ nav .logo {
 	}
 }
 
-@media (max-width: 800px) {
-	nav .mainMenu {
-		height: 100vh;
-		position: fixed;
-		top: 0px;
-		right: 0px;
-		left: 0px;
-		z-index: 10;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: $main-color;
-		transition: top 1s ease 0s;
-		display: none;
-	}
-	nav .mainMenu .closeMenu {
-		display: block;
-		position: absolute;
-		top: 20px;
-		right: 20px;
-	}
-	nav .openMenu {
-		display: block;
-	}
-	nav .mainMenu li a:hover {
-		background: none;
-		color: $secondary-color;
-	}
-	.icons i {
-		display: inline-block;
-		padding: 12px;
-	}
-}
-
+// ==================================
+// MEDIA
+// ==================================
 @media (min-width: 768px) {
 	.header {
 		&__box {
@@ -397,6 +364,7 @@ nav .logo {
 			font-size: 1rem;
 		}
 	}
+
 	.navbar {
 		height: 75px;
 		&__logo {
@@ -442,18 +410,6 @@ nav .logo {
 					border-top: 1em solid transparent;
 					border-bottom: 1em solid transparent;
 				}
-				// &:after {
-				// 	content: '';
-				// 	position: absolute;
-				// 	right: 0px;
-				// 	bottom: 0;
-				// 	width: 0;
-				// 	height: 0;
-				// 	border-left:30px solid #32557f;
-				// 	border-top:30px solid transparent;
-				// 	border-bottom:30px solid transparent;
-				//   }
-				// text-transform: uppercase;
 			}
 			&-localization {
 				padding: 0.45em;
@@ -504,11 +460,13 @@ nav .logo {
 			}
 		}
 	}
+	.therapy {
+		&__boxes {
+			display: flex;
+			flex-direction: row;
+		}
+	
 }
-.therapy {
-	&__boxes{
-		flex-direction: row;
-	}
 }
 
 
@@ -573,5 +531,43 @@ nav .logo {
 			max-width: 1200px;
 			margin: 0 6em;
 		}
+	}
+}
+
+// ==================================
+// NAV OPTIONS
+// ==================================
+
+@media (max-width: 800px) {
+	nav .mainMenu {
+		height: 100vh;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		z-index: 10;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: $main-color;
+		transition: top 1s ease 0s;
+		display: none;
+	}
+	nav .mainMenu .closeMenu {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	nav .openMenu {
+		display: block;
+	}
+	nav .mainMenu li a:hover {
+		background: none;
+		color: $secondary-color;
+	}
+	.icons i {
+		display: inline-block;
+		padding: 12px;
 	}
 }

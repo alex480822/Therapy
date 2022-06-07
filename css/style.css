@@ -158,7 +158,7 @@ nav .logo {
   width: 50vh;
   padding: 0.5em;
   margin-bottom: 20%;
-  background-color: rgba(59, 172, 182, 0.5);
+  background-color: #2F8F9D;
   border-radius: 10px;
   text-align: center;
 }
@@ -167,7 +167,7 @@ nav .logo {
   margin-bottom: 0.5em;
   font-weight: 600;
   font-size: 1.4rem;
-  color: #2e2e2e;
+  color: #fff;
 }
 
 .header__box-name {
@@ -342,7 +342,7 @@ nav .logo {
 .card__group i {
   font-size: 3rem;
   padding: 0.5em;
-  color: #2F8F9D;
+  color: #3bacb6;
 }
 
 .card__group-body {
@@ -369,23 +369,13 @@ nav .logo {
 }
 
 .therapy__title {
+  padding: 1em;
+  background-color: #2F8F9D;
+  color: #fff;
   width: 100%;
   margin-bottom: 1em;
   text-align: center;
   font-size: 1.4rem;
-}
-
-.therapy__boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .therapy__box {
@@ -410,55 +400,13 @@ nav .logo {
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
-  background-color: #2F8F9D;
+  background-color: #3bacb6;
 }
 
 .therapy__box-text-description {
   padding: 1em;
   text-align: center;
   font-size: 1rem;
-}
-
-@media (max-width: 800px) {
-  nav .mainMenu {
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    z-index: 10;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: #2F8F9D;
-    -webkit-transition: top 1s ease 0s;
-    transition: top 1s ease 0s;
-    display: none;
-  }
-  nav .mainMenu .closeMenu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  nav .openMenu {
-    display: block;
-  }
-  nav .mainMenu li a:hover {
-    background: none;
-    color: #ff7b00;
-  }
-  .icons i {
-    display: inline-block;
-    padding: 12px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -570,13 +518,15 @@ nav .logo {
   .card__group-body-text {
     padding: 0.5em;
   }
-}
-
-.therapy__boxes {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  .therapy__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media (min-width: 992px) {
@@ -627,6 +577,48 @@ nav .logo {
   .aboutme__box {
     max-width: 1200px;
     margin: 0 6em;
+  }
+}
+
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #2F8F9D;
+    -webkit-transition: top 1s ease 0s;
+    transition: top 1s ease 0s;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: #3bacb6;
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
