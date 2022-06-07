@@ -375,8 +375,7 @@ nav .logo {
   font-size: 1.4rem;
 }
 
-.therapy__box {
-  margin: 1em 0;
+.therapy__boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,17 +383,17 @@ nav .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 10px;
-  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.therapy__box img {
+.therapy__box {
+  margin: 1em 0.5em;
+  border-radius: 10px;
+}
+
+.therapy__box-img img {
   width: 100%;
 }
 
@@ -406,8 +405,9 @@ nav .logo {
 
 .therapy__box-text-title {
   padding: 0.8em;
+  height: 65px;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
   background-color: #2F8F9D;
@@ -416,7 +416,7 @@ nav .logo {
 .therapy__box-text-description {
   padding: 1em;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 800px) {
@@ -568,9 +568,15 @@ nav .logo {
     font-size: 1.3rem;
   }
   .card__group-body-text {
-    padding: 1em;
-    margin: 0.5em 0;
+    padding: 0.5em;
   }
+}
+
+.therapy__boxes {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 @media (min-width: 992px) {

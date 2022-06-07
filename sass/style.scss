@@ -216,19 +216,6 @@ nav .logo {
 			font-size: 1.3rem;
 			color: $main-color;
 			position: relative;
-
-			// &:after {
-			// 	content: '';
-			// 	position: absolute;
-			// 	right: 0px;
-			// 	bottom: 0;
-			// 	width: 0;
-			// 	height: 0;
-			// 	border-left:30px solid #32557f;
-			// 	border-top:30px solid transparent;
-			// 	border-bottom:30px solid transparent;
-			//   }
-			// text-transform: uppercase;
 		}
 		&-localization {
 			padding: 0.5em;
@@ -277,6 +264,46 @@ nav .logo {
 		transform: scale(1.1);
 	}
 }
+// .therapy {
+// 	padding: 2em 1em;
+// 	margin: 2em auto;
+// 	&__title {
+// 		width: 100%;
+// 		margin-bottom: 1em;
+// 		text-align: center;
+// 		font-size: 1.4rem;
+// 	}
+// 	&__box {
+// 		margin: 1em 0;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		align-items: center;
+// 		border-radius: 10px;
+// 		overflow: hidden;
+// 		img {
+// 			width: 100%;
+// 		}
+// 		&-text {
+// 			border: 1px solid $main-color;
+// 			border-bottom-left-radius: 10px;
+// 			border-bottom-right-radius: 10px;
+// 			&-title {
+// 				padding: 0.8em;
+// 				text-align: center;
+// 				font-size: 1.4rem;
+// 				font-weight: 600;
+// 				color: white;
+// 				background-color: $main-color;
+// 			}
+// 			&-description {
+// 				padding: 1em;
+// 				text-align: center;
+// 				font-size: 1.2rem;
+// 			}
+// 		}
+// 	}
+// }
 .therapy {
 	padding: 2em 1em;
 	margin: 2em auto;
@@ -286,16 +313,18 @@ nav .logo {
 		text-align: center;
 		font-size: 1.4rem;
 	}
-	&__box {
-		margin: 1em 0;
+	&__boxes{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		justify-content: space-between;
+	}
+	&__box {
+		margin: 1em 0.5em;
 		border-radius: 10px;
-		overflow: hidden;
-		img {
-			width: 100%;
+		&-img{
+			img {
+				width: 100%;
+			}
 		}
 		&-text {
 			border: 1px solid $main-color;
@@ -303,8 +332,9 @@ nav .logo {
 			border-bottom-right-radius: 10px;
 			&-title {
 				padding: 0.8em;
+				height: 65px;
 				text-align: center;
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 				font-weight: 600;
 				color: white;
 				background-color: $main-color;
@@ -312,7 +342,7 @@ nav .logo {
 			&-description {
 				padding: 1em;
 				text-align: center;
-				font-size: 1.2rem;
+				font-size: 1rem;
 			}
 		}
 	}
@@ -469,13 +499,18 @@ nav .logo {
 					font-size: 1.3rem;
 				}
 				&-text {
-					padding: 1em;
-					margin: 0.5em 0;
+					padding: 0.5em;
 				}
 			}
 		}
 	}
 }
+.therapy {
+	&__boxes{
+		flex-direction: row;
+	}
+}
+
 
 @media (min-width: 992px) {
 	.header {
