@@ -16,9 +16,9 @@ body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.6rem;
 }
-.wapper {
+.wrapper {
 	margin: 0 auto;
-	width: 100% !important;
+	width: 100%;
 	max-width: 1200px;
 }
 .section-padding {
@@ -264,46 +264,6 @@ nav .logo {
 		transform: scale(1.1);
 	}
 }
-// .therapy {
-// 	padding: 2em 1em;
-// 	margin: 2em auto;
-// 	&__title {
-// 		width: 100%;
-// 		margin-bottom: 1em;
-// 		text-align: center;
-// 		font-size: 1.4rem;
-// 	}
-// 	&__box {
-// 		margin: 1em 0;
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		align-items: center;
-// 		border-radius: 10px;
-// 		overflow: hidden;
-// 		img {
-// 			width: 100%;
-// 		}
-// 		&-text {
-// 			border: 1px solid $main-color;
-// 			border-bottom-left-radius: 10px;
-// 			border-bottom-right-radius: 10px;
-// 			&-title {
-// 				padding: 0.8em;
-// 				text-align: center;
-// 				font-size: 1.4rem;
-// 				font-weight: 600;
-// 				color: white;
-// 				background-color: $main-color;
-// 			}
-// 			&-description {
-// 				padding: 1em;
-// 				text-align: center;
-// 				font-size: 1.2rem;
-// 			}
-// 		}
-// 	}
-// }
 .therapy {
 	padding: 2em 1em;
 	margin: 2em auto;
@@ -317,7 +277,7 @@ nav .logo {
 		font-size: 1.4rem;
 	}
 	&__box {
-		margin: 1em 0.5em;
+		margin: 2em 0.5em;
 		border-radius: 10px;
 		&-img {
 			img {
@@ -325,9 +285,9 @@ nav .logo {
 			}
 		}
 		&-text {
-			border: 1px solid $main-color;
 			border-bottom-left-radius: 10px;
 			border-bottom-right-radius: 10px;
+			border: 1px solid $main-color;
 			&-title {
 				padding: 0.8em;
 				height: 65px;
@@ -465,10 +425,8 @@ nav .logo {
 			display: flex;
 			flex-direction: row;
 		}
-	
+	}
 }
-}
-
 
 @media (min-width: 992px) {
 	.header {
