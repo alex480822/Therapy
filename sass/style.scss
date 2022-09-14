@@ -309,8 +309,42 @@ nav .logo {
 // contact
 // ==================================
 .contact {
-	&__container {
+	&__title{
+		padding: 1em;
+		background-color: $main-color;
+		color: $pure-white;
 		width: 100%;
+		margin-bottom: 1em;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 1.8em 1em;
+		width: 100%;
+		border: 1px solid black;
+		&-details{
+			margin-top: 2em;
+			font-size: 1.4rem;
+			&-mail, &-telephone{
+				font-size: 1.1rem;
+			}
+		}
+
+		&-social{
+			padding: 1rem;
+			font-size: 1rem;
+			i{
+				font-size: 2rem;
+			}
+			p{
+				padding: 1em;
+				font-size: 1rem;
+			}
+		}
+		
 	}
 }
 // ==================================

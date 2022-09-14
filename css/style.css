@@ -409,8 +409,51 @@ nav .logo {
   font-size: 1rem;
 }
 
-.contact__container {
+.contact__title {
+  padding: 1em;
+  background-color: #2F8F9D;
+  color: #fff;
   width: 100%;
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 1.8em 1em;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.contact__container-details {
+  margin-top: 2em;
+  font-size: 1.4rem;
+}
+
+.contact__container-details-mail, .contact__container-details-telephone {
+  font-size: 1.1rem;
+}
+
+.contact__container-social {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.contact__container-social i {
+  font-size: 2rem;
+}
+
+.contact__container-social p {
+  padding: 1em;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
