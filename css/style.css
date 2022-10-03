@@ -409,6 +409,10 @@ nav .logo {
   font-size: 1rem;
 }
 
+.contact {
+  position: relative;
+}
+
 .contact__title {
   padding: 1em;
   background-color: #2F8F9D;
@@ -427,33 +431,92 @@ nav .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1.8em 1em;
   width: 100%;
-  border: 1px solid black;
+  background-color: #2F8F9D;
 }
 
-.contact__container-details {
-  margin-top: 2em;
-  font-size: 1.4rem;
+.contact__container-sectionTitle {
+  padding: 0.5em;
+  font-size: 1.2rem;
+}
+
+.contact__container-details, .contact__container-emailBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  border-radius: 1em;
+  background-color: #fff;
 }
 
 .contact__container-details-mail, .contact__container-details-telephone {
-  font-size: 1.1rem;
-}
-
-.contact__container-social {
-  padding: 1rem;
   font-size: 1rem;
 }
 
-.contact__container-social i {
+.contact__container-details-social {
+  padding: 1em;
+  font-size: 1rem;
+}
+
+.contact__container-details-social i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 2rem;
 }
 
-.contact__container-social p {
+.contact__container-details-social p {
   padding: 1em;
   font-size: 1rem;
+}
+
+.contact__container-emailBox-title {
+  padding: 0.5rem;
+  margin-top: 0.5em;
+  font-size: 1rem;
+}
+
+.contact__container-emailBox-name, .contact__container-emailBox-lastName, .contact__container-emailBox-text {
+  margin-bottom: 0.5em;
+}
+
+.contact__container-emailBox-text textarea {
+  min-height: 100px;
+  max-height: 100px;
+  min-width: auto;
+  max-width: 500px;
+}
+
+.contact__container-emailBox-button {
+  height: 2.5em;
+  width: 7em;
+  padding: 0.5em;
+  background-color: #2F8F9D;
+  border-radius: 1em;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -573,6 +636,26 @@ nav .logo {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .contact__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact__container-details, .contact__container-emailBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 

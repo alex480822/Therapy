@@ -216,35 +216,40 @@
         <div class="contact__title">
             <h2 class="contact">Kontakt</h2>
         </div>
-        <div class="contact__container">
-            <div class="contact__container-details">
-                <p class="contact__container-details-name">mgr. Izabela Kędziora</p>
-                <p class="contact__container-details-mail">Email: izabela_kedziora@dobrymail.com</p>
-                <p class="contact__container-details-telephone">tel. 000 000 000</p>
-                <div class="contact__container-social">
-                    <i class="fa-brands fa-facebook"></i>
-                    <p>Zapraszam na mój profil na Facebooku</p>
+        <div class="contact__container ">
+            <div class="contact-section1">
+                <div class="contact__container-details contact-section1">
+                    <p class="contact__container-sectionTitle ">mgr. Izabela Kędziora</p>
+                    <p class="contact__container-details-mail">Email: izabela_kedziora@dobrymail.com</p>
+                    <p class="contact__container-details-telephone">tel. 000 000 000</p>
+                    <div class="contact__container-details-social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Zapraszam na mój profil na Facebooku</p>
+                    </div>
                 </div>
             </div>
-            <div class="contact__container__emailBox">
-                <div class="contact__container__emailBox_title">
-                    <h4>Zostaw wiadomośc e-mail</h4>
-                </div>
-                <div class="contact__container__emailBox_box">
-                    <div class="contact__container__emailBox_name">
-                        <input type="text" name="Imię" id="">
+            <!-- <div class="contact__container-title">
+                <h4>Zostaw wiadomość e-mail</h4>
+            </div> -->
+            <div class=" contact-section2">
+                <div class="contact__container-emailBox">
+                    <div class="contact__container-sectionTitle">Formularz kontaktowy</div>
+                    <div class="contact__container-emailBox-name">
+                        <p class="contact__container-emailBox-title">Imię</p>
+                        <input class="contact__container-emailBox-input" type="text" name="name" id="">
                     </div>
-                    <div class="contact__container__emailBox_lastName">
-                        <div class="name">
-                            <input type="text" name="Nazwisko" id="">
-                        </div>
+                    <div class="contact__container-emailBox-lastName">
+                        <p class="contact__container-emailBox-title">Nazwisko</p>
+                        <input class="contact__container-emailBox-input" type="text" name="LastName" id="">
                     </div>
-                    <div class="contact__container__emailBox_text">
-                        <input type="text" name="Teść" id="">
+                    <div class="contact__container-emailBox-text">
+                        <p class="contact__container-emailBox-title">Treść wiadomości</p>
+                        
+                        <textarea name="contact__container-emailBox-textArea" id="" cols="30" rows="10"></textarea>
                     </div>
-                    <div class="contact__container__emailBox_button">
-                        <input type="button" value="Wyślij">
-                    </div>
+                    
+                        <input class="contact__container-emailBox-button" type="button" value="Wyślij">
+
                 </div>
 
             </div>
