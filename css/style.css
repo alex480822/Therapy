@@ -427,21 +427,43 @@ nav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 1.8em 1em;
   width: 100%;
-  background-color: #2F8F9D;
+  background-color: #3bacb6;
 }
 
 .contact__container-sectionTitle {
-  padding: 0.5em;
+  position: relative;
+  padding: 0.6em;
   font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contact__container-sectionTitle::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: -10px;
+  top: 0;
+  left: 10%;
+  border-bottom: 1px solid #2F8F9D;
+}
+
+.contact__container-sectionTitle::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: -10px;
+  bottom: 0;
+  right: 35%;
+  border-bottom: 1px solid #2F8F9D;
 }
 
 .contact__container-details, .contact__container-emailBox {
@@ -452,71 +474,70 @@ nav .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   padding: 0.8em;
   margin-top: 0.5em;
   border-radius: 1em;
   background-color: #fff;
 }
 
-.contact__container-details-mail, .contact__container-details-telephone {
-  font-size: 1rem;
+.contact__container-details {
+  top: 0;
 }
 
-.contact__container-details-social {
-  padding: 1em;
-  font-size: 1rem;
+.contact__container-details-title {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.8em;
 }
 
-.contact__container-details-social i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2rem;
-}
-
-.contact__container-details-social p {
-  padding: 1em;
-  font-size: 1rem;
+.contact__container-emailBox {
+  width: 100%;
 }
 
 .contact__container-emailBox-title {
   padding: 0.5rem;
-  margin-top: 0.5em;
-  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.8em;
 }
 
-.contact__container-emailBox-name, .contact__container-emailBox-lastName, .contact__container-emailBox-text {
-  margin-bottom: 0.5em;
-}
-
-.contact__container-emailBox-text textarea {
+.contact__container-emailBox textarea {
+  width: 80%;
   min-height: 100px;
   max-height: 100px;
-  min-width: auto;
   max-width: 500px;
+}
+
+.contact__container-emailBox-input {
+  width: 75%;
 }
 
 .contact__container-emailBox-button {
   height: 2.5em;
   width: 7em;
   padding: 0.5em;
-  background-color: #2F8F9D;
-  border-radius: 1em;
+  margin-top: 1em;
   color: #fff;
   font-size: 1rem;
+  background-color: #2F8F9D;
+  border-radius: 1em;
+  letter-spacing: 0.1rem;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.contact__container-emailBox-button:hover {
+  background-color: #fff;
+  color: #2F8F9D;
+  border: 2.5px solid #2F8F9D;
 }
 
 @media (min-width: 768px) {
@@ -642,9 +663,8 @@ nav .logo {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .contact__container-details, .contact__container-emailBox {
     display: -webkit-box;
@@ -656,6 +676,8 @@ nav .logo {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    height: 100%;
+    padding: 1.5rem;
   }
 }
 
